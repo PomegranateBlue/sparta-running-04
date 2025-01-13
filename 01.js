@@ -8,7 +8,19 @@
  * @param {Array} todos
  * @returns {Array}
  */
-function getIncompleteTodos(todos) {}
+function getIncompleteTodos(todos) {
+  const result = todos
+    .filter(({ completed }) => completed === false)
+    .map((element) => element);
+  return result;
+}
 
+const todos1 = [
+  { id: 1, title: "잠자기", completed: false },
+  { id: 2, title: "밥먹기", completed: true },
+  { id: 3, title: "코딩하기", completed: false },
+];
+console.log(getIncompleteTodos(todos1));
+// console.log(...todos1);
 // export 수정 불가
 export { getIncompleteTodos };
