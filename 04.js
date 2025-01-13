@@ -1,3 +1,5 @@
+//import { element } from "prop-types";
+
 /**
  * [04.js]
  *
@@ -11,8 +13,15 @@
  * @returns {Array} 새로운 todos 배열
  */
 function deleteTodo(todos, id) {
-    todos.find(({id})=>id===id?todos.map(({id})))
+  return todos.some((element) => element.id === id)
+    ? todos.filter((element) => element.id !== id)
+    : todos;
 }
+const todos1 = [
+  { id: 1, title: "첫 번째 할 일", completed: false },
+  { id: 2, title: "두 번째 할 일", completed: true },
+];
 
+console.log(deleteTodo(todos1, 2));
 // export 수정 불가
 export { deleteTodo };

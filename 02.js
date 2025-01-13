@@ -14,8 +14,8 @@
  */
 function createTodo(todos, title) {
   const newTodos = {
-    id: ++todos.length,
-    title: title,
+    id: crypto.randomUUID(),
+    title,
     completed: false,
   };
 
