@@ -10,7 +10,13 @@
  * @param {Array} users
  * @returns {Array}
  */
-function transformUsers(users) {}
-
+function transformUsers(users) {
+    const fullName=
+}
+const users1 = [
+  { firstName: "Alice", lastName: "Lee", age: 25 },
+  { firstName: "Bob", lastName: "Kim", age: 17 },
+];
+console.log(transformUsers(users1));
 // export 수정 불가
 export { transformUsers };
