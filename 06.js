@@ -11,7 +11,12 @@
  * @returns {Array}
  */
 function transformUsers(users) {
-    const fullName=
+  return users.map((user) => {
+    return {
+      fullName: user.firstName + " " + user.lastName,
+      isAdult: user.age >= 20,
+    };
+  });
 }
 const users1 = [
   { firstName: "Alice", lastName: "Lee", age: 25 },
